@@ -2,7 +2,7 @@ import { useState } from "react";
 
 // board dimensions is the size of the board that the robot can move on.
 
-enum AllowedPositions {
+export enum AllowedPositions {
   UP,
   DOWN,
   LEFT,
