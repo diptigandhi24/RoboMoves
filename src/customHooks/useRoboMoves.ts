@@ -32,11 +32,16 @@ const boundaryCheckPoints = {
     }
   },
 };
-export default function useRoboMove(boardSize: number) {
-  const [roboPosition, privateUpdateRoboPosition] = useState<RobotPosition>({
+export default function useRoboMove(
+  boardSize: number,
+  initialPosition: RobotPosition = {
     x: 0,
     y: 0,
-  });
+  }
+) {
+  const [roboPosition, privateUpdateRoboPosition] = useState<RobotPosition>(
+    initialPosition
+  );
   boundaryCheckPoints.endPoint = boardSize - 1;
 
   function updatePosition(pos: AllowedPositions) {
