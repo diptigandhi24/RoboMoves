@@ -17,3 +17,14 @@ test("Move robo in the foward/left direction", () => {
 
   expect(result.current.roboPosition).toEqual({ x: 0, y: 1 });
 });
+
+test("Move robo in the backward/right direction", () => {
+  const { result } = renderHook(() => useRoboMove(5));
+
+  act(() => {
+    /* fire events that update state */
+    result.current.updatePosition(AllowedPositions.RIGHT);
+  });
+
+  expect(result.current.roboPosition).toEqual({ x: 0, y: 1 });
+});
