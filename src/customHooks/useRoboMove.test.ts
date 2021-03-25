@@ -23,8 +23,11 @@ test("Move robo in the backward/right direction", () => {
 
   act(() => {
     /* fire events that update state */
+    result.current.updatePosition(AllowedPositions.LEFT);
+  });
+  act(() => {
+    /* fire events that update state */
     result.current.updatePosition(AllowedPositions.RIGHT);
   });
-
-  expect(result.current.roboPosition).toEqual({ x: 0, y: 1 });
+  expect(result.current.roboPosition).toEqual({ x: 0, y: 0 });
 });
