@@ -39,4 +39,12 @@ describe("checking all direction Robo move along with boundary points", () => {
     });
     expect(result.current.roboPosition).toEqual({ x: 0, y: 4 });
   });
+  test("Move Robo down from the initial position of 0, 0", () => {
+    const { result } = renderHook(() => useRoboMove(5));
+    act(() => {
+      /* fire events that update state */
+      result.current.updatePosition(AllowedPositions.DOWN);
+    });
+    expect(result.current.roboPosition).toEqual({ x: 1, y: 0 });
+  });
 });
