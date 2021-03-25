@@ -7,8 +7,13 @@ test("check whether the hook initializes the start position", () => {
   expect(result.current.roboPosition).toEqual({ x: 0, y: 0 });
 });
 
-test("Move robo in the right direction ", () => {
+test("Move robo in the foward/left direction", () => {
   const { result } = renderHook(() => useRoboMove(5));
-  result.current.updatePosition(AllowedPositions.RIGHT);
-  expect(result.current.roboPosition).toEqual({ x: 1, y: 0 });
+
+  act(() => {
+    /* fire events that update state */
+    result.current.updatePosition(AllowedPositions.LEFT);
+  });
+
+  expect(result.current.roboPosition).toEqual({ x: 0, y: 1 });
 });
