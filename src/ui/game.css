@@ -1,0 +1,20 @@
+.boardWrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+  width: 500px;
+  height: 500px;
+  background-color: black;
+  padding: 1px;
+}
+.row {
+  color: black;
+  background-color: white;
+  padding: 5px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
