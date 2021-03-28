@@ -1,8 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  // add the hook
+  // hook gives you robot position, pass into Game
+  // add buttons
+  // connect buttons to hook
   return (
     <div className="App">
       <header className="App-header">
@@ -16,7 +20,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          sxada
         </a>
       </header>
     </div>

@@ -7,17 +7,17 @@ import "./game.css";
 // }
 
 interface CellProps {
-  rowId: string;
-  colId: string;
-  children?: string;
-  id: string;
+  rowId: number;
+  colId: number;
+  text?: string;
+  key: string;
 }
 
-export default function Cell({ rowId, colId, children, id }: CellProps) {
+export default function Cell({ rowId, colId, text, key }: CellProps) {
   return (
-    <div className="row" data-rowId={rowId} data-colId={colId} id={id}>
+    <div className="row" data-rowId={rowId} data-colId={colId} key={key}>
       {`P:${rowId} x ${colId}`}
-      {children}
+      {text}
     </div>
   );
 }
