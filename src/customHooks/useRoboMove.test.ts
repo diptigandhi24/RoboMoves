@@ -1,6 +1,8 @@
 // we want to make a test for the custom hook that controls the robot.
 import { renderHook, act } from "@testing-library/react-hooks";
-import useRoboMove, { AllowedPositions } from "./useRoboMoves";
+import useRoboMove from "./useRoboMoves";
+import { AllowedPositions } from "../type";
+
 describe("checking all direction Robo move along with boundary points", () => {
   test("check whether the hook initializes the start position", () => {
     const { result } = renderHook(() => useRoboMove(5));

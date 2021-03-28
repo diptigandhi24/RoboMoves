@@ -1,18 +1,6 @@
 import { useState } from "react";
-
+import { AllowedPositions, RobotPosition } from "../type";
 // board dimensions is the size of the board that the robot can move on.
-
-export enum AllowedPositions {
-  UP,
-  DOWN,
-  LEFT,
-  RIGHT,
-}
-
-interface RobotPosition {
-  x: number;
-  y: number;
-}
 
 const boundaryCheckPoints = {
   startPoint: 0,
