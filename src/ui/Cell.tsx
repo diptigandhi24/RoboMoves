@@ -16,7 +16,6 @@ interface CellProps {
 export default function Cell({ rowId, colId, text, key }: CellProps) {
   return (
     <div className="row" data-rowId={rowId} data-colId={colId} key={key}>
-      {`P:${rowId} x ${colId}`}
       {text}
     </div>
   );
