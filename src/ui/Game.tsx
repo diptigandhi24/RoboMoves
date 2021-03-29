@@ -5,6 +5,7 @@ import cellContent from "./CellContent";
 interface GameProps {
   squareBoardSize: number;
   robotPosition: RobotPosition;
+  id: string;
 }
 
 export default function Game(props: GameProps) {
@@ -17,6 +18,7 @@ export default function Game(props: GameProps) {
         gridTemplateColumns: `repeat(${props.squareBoardSize}, 1fr)`,
         gridTemplateRows: `repeat(${props.squareBoardSize}, 1fr)`,
       }}
+      id={props.id}
     >
       {indices.map((row) =>
         indices.map((column) => (
@@ -32,6 +34,7 @@ export default function Game(props: GameProps) {
               row,
               column
             )}
+            id={`${row}${column}`}
           />
         ))
       )}

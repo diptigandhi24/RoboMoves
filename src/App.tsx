@@ -18,9 +18,11 @@ function App() {
   });
   return (
     <div className="App">
+      <h1 id="welcome">WelCome to Puppeteer</h1>
       <Game
         squareBoardSize={boardSize}
         robotPosition={{ x: roboPosition.x, y: roboPosition.y }}
+        id="test"
       />
       <button
         type="button"
@@ -32,21 +34,21 @@ function App() {
       <button
         type="button"
         onClick={(event) => updatePosition(AllowedPositions.UP)}
-        value="DOWN"
+        value="UP"
       >
         Up
       </button>
       <button
         type="button"
         onClick={(event) => updatePosition(AllowedPositions.LEFT)}
-        value="DOWN"
+        value="LEFT"
       >
         Left
       </button>
       <button
         type="button"
         onClick={(event) => updatePosition(AllowedPositions.RIGHT)}
-        value="DOWN"
+        value="RIGHT"
       >
         Right
       </button>

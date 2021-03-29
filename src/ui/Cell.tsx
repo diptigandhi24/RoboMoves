@@ -11,11 +11,18 @@ interface CellProps {
   colId: number;
   text?: string;
   key: string;
+  id: string;
 }
 
-export default function Cell({ rowId, colId, text, key }: CellProps) {
+export default function Cell({ rowId, colId, text, key, id }: CellProps) {
   return (
-    <div className="row" data-rowId={rowId} data-colId={colId} key={key}>
+    <div
+      className="row"
+      data-rowId={rowId}
+      data-colId={colId}
+      key={key}
+      id={id}
+    >
       {text}
     </div>
   );
